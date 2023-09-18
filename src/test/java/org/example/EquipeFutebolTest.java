@@ -8,18 +8,14 @@ class EquipeFutebolTest {
 
     @Test
     void deveRetornarNomeTreinador() {
-
+        Equipe equipe = EquipeFactory.obterEquipe("Futebol");
+        equipe.setTreinador("Marcos");
+        assertEquals("Marcos", equipe.getTreinador());
     }
-
     @Test
-    void setTreinador() {
-    }
-
-    @Test
-    void getTotalJogadores() {
-    }
-
-    @Test
-    void setTotalJogadores() {
+    void deveRetornarTotalJogadores() {
+        Equipe equipe = EquipeFactory.obterEquipe("Futebol");
+        equipe.setTotalJogadores(38);
+        assertEquals(38, equipe.getTotalJogadores());
     }
 }
