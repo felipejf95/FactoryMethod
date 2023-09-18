@@ -6,7 +6,7 @@ public class EquipeFactory {
         Class classe = null;
         Object objeto = null;
         try{
-            classe = Class.forName("FactoryMethod.Equipe" + equipe);
+            classe = Class.forName("org.example.Equipe" + equipe);
             objeto = classe.newInstance();
         } catch (Exception ex){
             throw new IllegalArgumentException("Equipe nao existe");
