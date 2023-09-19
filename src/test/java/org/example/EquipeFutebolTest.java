@@ -7,15 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class EquipeFutebolTest {
 
     @Test
-    void deveRetornarNomeTreinador() {
+    void deveRetornarEquipeJogando() {
         Equipe equipe = EquipeFactory.obterEquipe("Futebol");
-        equipe.setTreinador("Marcos");
-        assertEquals("Marcos", equipe.getTreinador());
+        assertEquals("Equipe de futebol jogando", equipe.equipeJogando());
     }
     @Test
-    void deveRetornarTotalJogadores() {
+    void deveRetornarEquipeTreinando() {
         Equipe equipe = EquipeFactory.obterEquipe("Futebol");
-        equipe.setTotalJogadores(38);
-        assertEquals(38, equipe.getTotalJogadores());
+        assertEquals("Equipe de futebol treinando", equipe.equipeTreinando());
     }
 }
